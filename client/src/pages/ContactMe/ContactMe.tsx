@@ -208,6 +208,7 @@ const ContactMe = () => {
                           className={s.checkbox}
                           type="checkbox"
                           checked={!!field.value}
+                          value="accepted"
                           onChange={() => toggleCheckbox()}
                         />
                         <p className={s.agreement}>
