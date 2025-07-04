@@ -17,9 +17,12 @@ const Login: FC<LoginProps> = ({ setIsAdmin }) => {
     }
 
     try {
-      const res = await axios.get("http://localhost:3000/users", {
-        params: { username, password },
-      });
+      const res = await axios.get(
+        "https://aerovisionbackend.onrender.com/users",
+        {
+          params: { username, password },
+        }
+      );
 
       if (res.data.length > 0) {
         setIsAdmin(true);

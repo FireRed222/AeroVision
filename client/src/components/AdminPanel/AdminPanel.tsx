@@ -2,7 +2,7 @@ import { useState, useEffect, FC, ChangeEvent } from "react";
 import axios from "axios";
 import s from "./AdminPanel.module.scss";
 
-const API_URL = "http://localhost:3000/swiperInfo";
+const API_URL = "https://aerovisionbackend.onrender.com/swiperInfo";
 
 interface CardItem {
   id: number;
@@ -50,7 +50,7 @@ const AdminPanel: FC<AdminPanelProps> = ({ onLogout }) => {
       setItems((prev) => [...prev, res.data]);
     }
 
-    setForm({ name: "", text: "", job: "", src: "", starRating: "", });
+    setForm({ name: "", text: "", job: "", src: "", starRating: "" });
     setEditId(null);
   };
 
