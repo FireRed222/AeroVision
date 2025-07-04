@@ -7,7 +7,7 @@ const Blog = () => {
   return (
     <>
       <Projects />
-      <Testimonials/>
+      <Testimonials />
     </>
   );
 };

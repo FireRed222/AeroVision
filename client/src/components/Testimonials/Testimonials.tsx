@@ -96,8 +96,8 @@ const Testimonials = () => {
             },
           }}
         >
-          {data?.map((slide: any) => (
-            <SwiperSlide>
+          {data?.map((slide: any, index: number) => (
+            <SwiperSlide key={index}>
               {({ isActive }) => (
                 <div className={`${s.swiperContainer} ${isActive && s.active}`}>
                   <img className={s.img} src={slide.src} alt={slide.src} />
