@@ -1,0 +1,96 @@
+@use "/src/style/variable.scss" as v;
+
+.footer {
+  width: 100%;
+  background-color: v.$blue;
+  margin: 0 auto;
+
+  @media (max-width: 1050px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    padding: 50px 81px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1050px) {
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px 10px;
+    }
+
+    .footerInfo {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      max-width: 951px;
+      width: 100%;
+
+      @media (max-width: 1050px) {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .ttl {
+          font-family: var(--second-family);
+          font-size: 25px;
+          line-height: 100%;
+          color: v.$white;
+        }
+      }
+
+      .subttl {
+        color: #79b2f2;
+
+        @media (max-width: 1050px) {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .footerSocials {
+      display: flex;
+      max-width: 297px;
+      width: 100%;
+      align-items: center;
+      gap: 8px;
+
+      .follow {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        color: #79b2f2;
+        max-width: 132px;
+        width: 100%;
+      }
+      svg {
+        cursor: pointer;
+
+        circle {
+          transition: 0.5s;
+        }
+
+        path {
+          transition: 0.5s;
+        }
+
+        &:hover {
+          circle {
+            fill: v.$white;
+          }
+          path {
+            fill: v.$blue;
+          }
+        }
+      }
+    }
+  }
+}

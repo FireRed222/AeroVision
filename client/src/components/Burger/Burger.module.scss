@@ -1,0 +1,71 @@
+@use "/src/style/variable.scss" as v;
+
+.burger {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100dvh;
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.5s;
+  z-index: 2;
+  
+  &.active {
+    left: 0;
+  }
+
+  .container {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    background-color: v.$white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    position: relative;
+    
+
+    .img {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .li {
+        .link {
+          font-weight: 600;
+          font-size: 18px;
+          color: #333;
+
+          &.active {
+            color: v.$blue;
+          }
+        }
+      }
+    }
+
+    .btn {
+      border-radius: 50px;
+      padding: 13px 31px;
+      background-color: v.$blue;
+      font-weight: 600;
+      font-size: 20px;
+      color: v.$white;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: v.$blue;
+      }
+    }
+  }
+}

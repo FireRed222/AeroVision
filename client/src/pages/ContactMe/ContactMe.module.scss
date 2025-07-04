@@ -1,0 +1,270 @@
+@use "/src/style/variable.scss" as v;
+
+.contactMe {
+  width: 100%;
+  background-color: v.$blue;
+  .bottomContainer {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    background-color: v.$blue;
+    display: flex;
+    justify-content: center;
+
+    .container {
+      max-width: 1060px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+
+      .info {
+        max-width: 685px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .ttl {
+          font-weight: 600;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #e9efff;
+        }
+
+        .subttl {
+          font-size: 50px;
+          line-height: 100%;
+          color: v.$white;
+        }
+      }
+
+      .overallContainer {
+        max-width: 1500px;
+        width: 100%;
+        padding: 10px 0 50px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        padding: 0 10px;
+
+        @media (max-width: 950px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .contact {
+          max-width: 540px;
+          width: 100%;
+          border-radius: 15px;
+          padding: 30px;
+          background-color: v.$white;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          height: 272px;
+          justify-content: space-around;
+
+          @media (max-width: 950px) {
+            max-width: clamp(23.125rem, 15.725rem + 30.36vw, 33.75rem);
+          }
+
+          .contactInfo {
+            max-width: 455px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .hotline {
+              max-width: 198px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              .hotlineTtl {
+                font-size: 16px;
+                line-height: 125%;
+                color: #333;
+              }
+              .hotlineNumber {
+                font-size: 24px;
+                line-height: 125%;
+                color: #333;
+              }
+            }
+
+            .contactOverall {
+              max-width: 455px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              .contactDataTtl {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 162%;
+                color: #333;
+                text-align: start;
+              }
+
+              .contactDataInfo {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 162%;
+                color: #333;
+              }
+            }
+          }
+        }
+
+        .form {
+          @media (max-width: 950px) {
+            max-width: clamp(23.125rem, 15.725rem + 30.36vw, 33.75rem);
+            width: 100%;
+          }
+          .error {
+            color: v.$white;
+            transition: 0.5s;
+          }
+          .ultimateContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            @media (max-width: 950px) {
+              align-items: center;
+            }
+
+            .userInput {
+              max-width: 540px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+
+              .personInfo {
+                display: flex;
+                gap: 15px;
+
+                @media (max-width: 950px) {
+                  flex-direction: column;
+                }
+
+                .inp {
+                  max-width: 250px;
+                  width: 100%;
+                  padding: 15px;
+                  line-height: 125%;
+                  border-radius: 5px;
+                  background-color: v.$white;
+
+                  @media (max-width: 950px) {
+                    max-width: clamp(23.125rem, 15.725rem + 30.36vw, 33.75rem);
+                    width: 100%;
+                  }
+                }
+              }
+
+              .inp {
+                width: 100%;
+                padding: 15px;
+                line-height: 125%;
+                border-radius: 5px;
+                background-color: v.$white;
+              }
+
+              .inpBig {
+                width: 100%;
+                padding: 15px;
+                line-height: 125%;
+                border-radius: 5px;
+                background-color: v.$white;
+                text-align: start;
+                height: 142px;
+              }
+            }
+
+            .terms {
+              display: flex;
+              gap: 15px;
+              text-align: start;
+
+              @media (max-width: 950px) {
+                max-width: clamp(23.125rem, 15.725rem + 30.36vw, 33.75rem);
+                width: 100%;
+              }
+
+              .checkbox {
+                border-radius: 3px;
+                width: 15px;
+                height: 15px;
+                background-color: v.$white;
+                cursor: pointer;
+              }
+
+              .agreement {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                color: #e9efff;
+
+                .link {
+                  text-decoration: underline;
+                  text-decoration-skip-ink: none;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 100%;
+                  color: #e9efff;
+                  transition: 0.5s;
+
+                  &:hover {
+                    font-size: 15px;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+
+            .successMessage {
+              color: v.$white;
+              font-weight: bold;
+            }
+
+            .btn {
+              max-width: 198px;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 100%;
+              color: v.$white;
+              padding: 17px 33px;
+              border-radius: 50px;
+              background-color: #00489a;
+              transition: 0.5s;
+              &:hover {
+                background-color: #002652;
+                cursor: pointer;
+              }
+
+              &:active {
+                background-color: #001125;
+              }
+
+              @media (max-width: 950px) {
+                width: 100%;
+                max-width: clamp(23.125rem, 15.725rem + 30.36vw, 33.75rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

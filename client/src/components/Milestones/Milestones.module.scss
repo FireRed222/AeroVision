@@ -1,0 +1,90 @@
+@use "/src/style/variable.scss" as v;
+
+.milestones {
+  background-color: v.$blue;
+  padding: clamp(1.875rem, -0.006rem + 7.72vw, 6.25rem) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  @media (max-width: 1297px) {
+    gap: 30px;
+  }
+
+  .text {
+    max-width: 684px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: clamp(0.938rem, 0.07rem + 3.56vw, 1.5rem);
+
+    .ttl {
+      font-weight: 600;
+      font-size: clamp(0.938rem, 0.456rem + 1.98vw, 1.25rem);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #e9efff;
+    }
+
+    .subttl {
+      font-size: clamp(2.5rem, 1.738rem + 3.13vw, 3.125rem);
+      line-height: 100%;
+      color: #fff;
+      padding: 0 10px;
+    }
+  }
+
+  .container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 50px 0px;
+    @media (max-width: 1297px) {
+      padding: 30px 0px;
+    }
+
+    .cardContainer {
+      gap: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+
+      @media (max-width: 1297px) {
+        max-width: 900px;
+        width: 100%;
+      }
+      .card {
+        background-color: v.$white;
+        border-radius: 15px;
+        padding: 30px;
+        max-width: 297px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .cardValue {
+          font-size: 50px;
+          line-height: 100%;
+          text-align: center;
+          color: #333;
+        }
+
+        .cardText {
+          font-weight: 600;
+          font-size: 17px;
+          text-align: center;
+          color: #333;
+          line-height: 125%;
+
+          @media (max-width: 1199px) {
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "username": "lale34",
+      "password": "pkm2##"
+    }
+  ],
+  "swiperInfo": [
+    {
+      "name": "Savannah Nguyen",
+      "text": "Lorem ipsum dolora sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus",
+      "job": "President of Sales",
+      "src": "/savannah.png",
+      "starRating": "5",
+      "id": 1
+    },
+    {
+      "name": "Jenny Wilson",
+      "text": "Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus",
+      "job": "Medical Assistant",
+      "src": "/jenny.png",
+      "starRating": "5",
+      "id": 2
+    },
+    {
+      "name": "Esther Howard",
+      "text": "Lorem ipsum dolora sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus",
+      "job": "Nursing Assistant",
+      "src": "/esther.png",
+      "starRating": 5,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "text": "Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus",
+      "name": "Cameron Williamson",
+      "job": "Marketing Coordinator",
+      "src": "/cameron.png",
+      "starRating": 4
+    },
+    {
+      "id": 5,
+      "text": "Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus",
+      "name": "LeBron James",
+      "job": "The Goat",
+      "src": "/lebron.png",
+      "starRating": 5
+    },
+    {
+      "id": 6,
+      "text": "Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus",
+      "name": "Spider-Man",
+      "job": "Superhero",
+      "src": "/spiderman.png",
+      "starRating": 5
+    },
+    {
+      "id": 7,
+      "text": "Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus",
+      "name": "Hatsune Miku",
+      "job": "Singer",
+      "src": "/hatsune.png",
+      "starRating": 5
+    },
+    {
+      "id": 8,
+      "text": "Throughout Heaven and Earth, I Alone Am The Honored One. Throughout Heaven and Earth, I Alone Am The Honored One. I Alone Am The Honored One.",
+      "name": "Satoru Gojo",
+      "job": "Curse Exorcist",
+      "src": "/satoru.png",
+      "starRating": 5
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+@use '/src/style/variable.scss' as v;
+
+.ourProjects {
+  max-width: 1440px;
+  margin: 100px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    max-width: 1298px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .info {
+      max-width: clamp(23.125rem, 11.276rem + 59.25vw, 42.75rem);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      .ttl {
+        font-weight: 600;
+        font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.25rem);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #0078ff;
+      }
+
+      .subttl {
+        font-size: clamp(2.5rem, 2.123rem + 1.89vw, 3.125rem);
+        line-height: 100%;
+        text-align: center;
+        color: #222;
+      }
+    }
+
+    .btns {
+      max-width: 836px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(0.938rem, 0.598rem + 1.7vw, 1.5rem);
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+
+      .btn:nth-child(3) {
+        max-width: clamp(9rem, 6.132rem + 14.34vw, 13.75rem);
+      }
+
+      .btn {
+        border: 1px solid v.$blue;
+        border-radius: 50px;
+        padding: clamp(0.5rem, 0.311rem + 0.94vw, 0.813rem) 0;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: clamp(0.938rem, 0.749rem + 0.94vw, 1.25rem);
+        color: v.$blue;
+        transition: 0.5s;
+        max-width: clamp(7.875rem, 5.233rem + 13.21vw, 12.25rem);
+        width: 100%;
+
+        &:first-of-type {
+          max-width: clamp(5rem, 2.66rem + 11.7vw, 8.875rem);
+        }
+
+        &:hover {
+          background-color: v.$blue;
+          color: v.$white;
+        }
+      }
+    }
+
+    .projects {
+      max-width: 1298px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+
+      .blur {
+        width: clamp(19.375rem, 3.375rem + 80vw, 25.375rem);
+        height: 367px;
+        position: absolute;
+        z-index: 1;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        will-change: opacity, backdrop-filter;
+        transition: opacity 0.2s ease-in, backdrop-filter 0.2s ease-in;
+
+        @media (max-width: 440px) {
+          width: clamp(17.5rem, 5.446rem + 64.29vw, 23.125rem);
+          height: clamp(15.625rem, 4.241rem + 60.71vw, 20.938rem);
+        }
+        // &:hover {
+        //   backdrop-filter: blur(2px);
+
+        //   .blurTtl {
+        //     opacity: 1;
+        //   }
+        // }
+
+        .blurTtl {
+          // opacity: 0;
+          transition: 0.5s;
+          color: v.$white;
+          font-weight: 700;
+          text-shadow: 0 0 6px rgba(0, 0, 0, 0.5), 0 0 12px rgba(0, 0, 0, 0.4);
+          cursor: pointer;
+          user-select: none;
+          //  -webkit-text-stroke-width: 1px;
+          //  -webkit-text-stroke-color: v.$blue;
+        }
+      }
+
+      .img {
+        @media (max-width: 440px) {
+          width: clamp(17.5rem, 5.446rem + 64.29vw, 23.125rem);
+        }
+      }
+    }
+  }
+}

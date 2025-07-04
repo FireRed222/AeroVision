@@ -1,0 +1,118 @@
+@use '/src/style/variable.scss' as v;
+
+.header {
+   max-width: 1277px;
+   width: 100%;
+   margin: clamp(3.125rem, 2.218rem + 3.72vw, 5.188rem) auto;
+   padding: 0 10px;
+   display: flex;
+   gap: 100px;
+   flex-wrap: wrap;
+
+   @media (max-width: 1218px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: clamp(0.938rem, -0.299rem + 5.07vw, 3.75rem);
+   }
+
+   .block {
+      max-width: 544px;
+      width: 100%;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      
+      .info {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+
+         .ttl {
+            font-weight: 600;
+            font-size: 25px;
+         }
+   
+         .subttl {
+            font-size: clamp(1.875rem, 1.051rem + 3.38vw, 3.75rem);
+            line-height: 125%;
+   
+            .name {
+               font-size: clamp(1.875rem, 0.776rem + 4.51vw, 4.375rem);
+               color: v.$blue;
+               display: block;
+            }
+         }
+         
+         .text {
+            font-size: 25px;
+            line-height: 140%;
+         }
+      }
+
+      .btns {
+         display: flex;
+         gap: 44px;
+
+         @media (max-width: 1218px) {
+            flex-direction: column;
+            gap: clamp(0.938rem, 0.141rem + 3.27vw, 2.75rem);
+         }
+
+         .link {
+            border-radius: 50px;
+            padding: 13px 39px;
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 20px;
+            color: v.$white;
+            background-color: v.$blue;
+            transition: 0.5s;
+            &:hover {
+               background-color: adjust-hue(
+                  $color: rgba(0, 0, 0, 0.696),
+                  $degrees: 90
+               );
+               scale: 0.9;
+            }
+
+            &:active {
+               background-color: black;
+               scale: 1.1;
+            }
+         }
+
+         .download {
+            border: 1px solid v.$blue;
+            border-radius: 50px;
+            padding: 14px 37px;
+            font-weight: 600;
+            font-size: 20px;
+            color: v.$blue;
+            display: flex;
+            gap: 11px;   
+            transition: 0.5s;
+            justify-content: center;
+
+            &:hover {
+               cursor: pointer;
+               scale: 0.9;
+            }
+
+            &:active {
+               scale: 1.1;
+            }
+         }
+      }
+   }
+
+   .man {
+      border: 1px solid #f2f2f2;
+      border-radius: 300px;
+
+      @media (max-width: 1218px) {
+         width: 480px;
+      }
+   }
+}

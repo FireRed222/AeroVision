@@ -1,0 +1,49 @@
+@use "/src/style/variable.scss" as v;
+.div {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+
+  .container {
+    background: v.$blue;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 28rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .input {
+      width: 100%;
+      padding: 15px;
+      line-height: 125%;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    background-color: #00489a;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    font-size: clamp(1rem, 0.744rem + 0.95vw, 1.125rem);
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: v.$white;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: #000319a0;
+      color: #fff;
+    }
+  }
+}

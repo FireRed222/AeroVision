@@ -1,0 +1,30 @@
+@use "/src/style/variable.scss" as v;
+
+.software {
+  background-color: #f8f8f8;
+  padding: 65px 0;
+
+  .container {
+   max-width: 1336px;
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+
+   @media (max-width: 1334px) {
+      gap: 20px;
+   }
+
+   .img {
+      width: 267px;
+      opacity: 0.2;
+      transition: 0.5s;
+
+      &:hover {
+         opacity: 1;
+         scale: 1.1;
+      }
+   }
+  }
+}

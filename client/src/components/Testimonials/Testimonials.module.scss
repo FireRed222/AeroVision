@@ -1,0 +1,196 @@
+@use '/src/style/variable.scss' as v;
+
+.MySwiper {
+  max-width: 2000px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #000000;
+  max-width: 300px;
+  width: 100%;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide-active {
+  text-align: center;
+  font-size: 18px;
+  background: #000000;
+  max-width: 300px;
+  width: 100%;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials {
+  max-width: 1440px;
+  margin: 100px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    max-width: 1278px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    .info {
+      max-width: 684px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .ttl {
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #0078ff;
+      }
+
+      .subttl {
+        font-size: 50px;
+        line-height: 100%;
+        text-align: center;
+        color: #222;
+      }
+    }
+
+    .btns {
+      max-width: 1278px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .leftArrow {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid v.$blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .active {
+        background-color: v.$blue;
+        transition: 0.5s;
+        path {
+          fill: white;
+        }
+      }
+      .rightArrow {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid v.$blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .swiperContainer {
+      max-width: 297px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      padding: 30px 20px;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      margin: 0 auto;
+
+      .img {
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        background-position: center;
+      }
+
+      .stars {
+        max-width: 156px;
+        width: 100%;
+        display: flex;
+        gap: 5px;
+        margin: 0 auto;
+      }
+
+      .swiperText {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        color: #000;
+        height: 120px;
+      }
+
+      .personalInfo {
+        max-width: 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .swiperName {
+          font-weight: 600;
+          font-size: 16px;
+          text-transform: uppercase;
+          text-align: center;
+          color: #000;
+        }
+        .swiperJob {
+          font-weight: 400;
+          font-size: 16px;
+          text-align: center;
+          color: #666;
+        }
+      }
+
+      &.active {
+        background-color: v.$blue;
+        transition: 0.6s;
+        border: 1px solid v.$blue;
+
+        .swiperText {
+          color: v.$white;
+        }
+        .personalInfo {
+        .swiperName {
+          color: v.$white;
+        }
+        .swiperJob {
+          color: v.$white;
+        }
+        }
+      }
+    }
+  }
+}
